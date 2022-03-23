@@ -1,4 +1,4 @@
-import { UIManager, Dimensions, StatusBar } from 'react-native'
+import { UIManager, Dimensions, StatusBar, Platform } from 'react-native'
 
 export const TOP_OFFSET = 5
 export const ARROW_WIDTH = 20
@@ -29,7 +29,7 @@ export function clearItemStyles(styles) {
 export async function getItemCoordinates(target) {
     const itemCoordinates = new Promise((resolve, reject) => {
         UIManager.measure(target, (x, y, width, height, px, py) => {
-            py = py + StatusBar.currentHeight
+            py = py + (Platform.OS === "android" ? 0 : StatusBar.currentHeight);
 
             const coords = {
                 width,
