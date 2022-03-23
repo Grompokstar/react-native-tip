@@ -363,8 +363,8 @@ export default class TipProvider extends Component {
                                 <TouchableOpacity
                                     activeOpacity={0.5}
                                     onPress={() => {
-                                        if (tourProps && tourProps.onDismiss) {
-                                          onDismiss();   
+                                        if (tourProps && tourProps.onClose) {
+                                          tourProps.onClose();   
                                         }
                                         this.closeTip;
                                     }}
