@@ -366,7 +366,7 @@ export default class TipProvider extends Component {
                                         if (tourProps && tourProps.onClose) {
                                           tourProps.onClose();   
                                         }
-                                        this.closeTip;
+                                        this.closeTip();
                                     }}
                                     style={_prevNextButtonStyle}
                                 >
