@@ -38,6 +38,10 @@ export interface ITipStep {
      * Use it with `delay` prop for async tasks.
     */
     nextAction?: () => void;
+    /**
+     * Action to be executed when the close button is pressed
+    */
+    onClose?: () => void;
     tipProps?: Omit<ITip, 'id'>;
 }
 
